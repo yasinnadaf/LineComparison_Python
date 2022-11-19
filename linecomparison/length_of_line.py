@@ -21,25 +21,13 @@ class Line:
         except Exception as e:
             logging.exception(e)
 
-    def compare_line(self, line_obj):
-        """
-        Function to compare length of line
-        """
-        try:
-            return self.length_line() == line_obj.length_line()
-        except Exception as e:
-            logging.exception(e)
-
 
 if __name__ == '__main__':
     a1 = int(input("Enter x1: "))
     b1 = int(input("Enter y1: "))
     a2 = int(input("Enter x2: "))
     b2 = int(input("Enter y2: "))
-    line1 = Line(a1, b1, a2, b2)
-    a1 = int(input("Enter x1: "))
-    b1 = int(input("Enter y1: "))
-    a2 = int(input("Enter x2: "))
-    b2 = int(input("Enter y2: "))
-    line2 = Line(a1, b1, a2, b2)
-    print(line1.compare_line(line2))
+    line_length = Line(a1, b1, a2, b2)
+    result = line_length.length_line()
+    print(f"Length of line is {result}")
+
